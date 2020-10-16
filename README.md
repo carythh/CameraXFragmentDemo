@@ -11,4 +11,6 @@ Google 爸爸给大家准备了CameraX，可以很方便的适配Android 5.0 + �
 
 Demo 链接：https://github.com/AnyLifeZLB/CameraXFragmentDemo
 
+Apk下载链接：https://github.com/AnyLifeZLB/CameraXFragmentDemo/releases/download/1.0/app-debug.apk
+
 ![image.png](https://upload-images.jianshu.io/upload_images/2376786-d2379a8523f3dc64.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
