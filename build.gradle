@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    // Top-level variables used for versioning
+    ext.java_version = JavaVersion.VERSION_1_8
+    ext.kotlin_version = '1.4.10'
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+
+        // for jcenter
+        // version: https://bintray.com/jfrog/jfrog-jars/gradle-bintray-plugin
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        // version: https://bintray.com/dcendents/gradle-plugins/com.github.dcendents%3Aandroid-maven-gradle-plugin
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        jcenter()
+
+        maven { url "https://jitpack.io" }
+
+        maven {
+            name "aliyunmaven"
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
+
+        maven { url 'http://developer.huawei.com/repo/'}
+
+        maven {
+            url 'https://dl.bintray.com/zouyuhan/maven'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
