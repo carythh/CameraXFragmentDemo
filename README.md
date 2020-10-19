@@ -7,7 +7,9 @@ Google 爸爸给大家准备了CameraX，可以很方便的适配Android 5.0 + �
 我实验了几款机型都是可以的）
 
 简单的封装了拍照，录制视频的CameraXFragment,大家有兴趣可以体验一下是否有问题，目前还在开发中
-可以先试用一下啊兼容性：implementation 'anylife.CameraXFragment:camerax:1.0.1'
+可以先试用一下啊兼容性
+
+### implementation 'anylife.CameraXFragment:camerax:1.0.1'
 
 Demo 链接：https://github.com/AnyLifeZLB/CameraXFragmentDemo
 
