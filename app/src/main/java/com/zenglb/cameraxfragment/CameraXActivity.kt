@@ -6,7 +6,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -25,12 +24,11 @@ import java.io.File
  *
  * 1.CameraX Extensions 是可选插件，您可以在支持的设备上添加效果。这些效果包括人像、HDR、夜间模式和美颜
  * 2.图片分析：无缝访问缓冲区以便在算法中使用，例如传入 MLKit
- * 3.
+ * 3.切换为录制视频模式的时候还会闪屏黑屏
  *
  *
  */
 class CameraXActivity : AppCompatActivity() {
-    private val REQUEST_CODE_CHOOSE_MEDIA: Int = 10000;
     private lateinit var cameraXFragment: CameraXFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,19 +39,13 @@ class CameraXActivity : AppCompatActivity() {
         cameraXFragment = CameraXFragment.newInstance("", "")
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, cameraXFragment).commitAllowingStateLoss()
+            .replace(R.id.fragment_container, cameraXFragment).commit()
 
 
-        //拍照，拍视频的各种状态处理
-        capture_btn.setCaptureLisenter(object : CaptureListener {
+        //拍照，拍视频的UI 操作的各种状态处理
+        capture_btn.setCaptureListener(object : CaptureListener {
             override fun takePictures() {
                 cameraXFragment.takePhoto()
-            }
-
-            //录制视频时间太短
-            override fun recordShort(time: Long) {
-                Log.d("Video", "Too short $time")
-                Toast.makeText(this@CameraXActivity,"时间太短，视频无效",Toast.LENGTH_SHORT).show()
             }
 
             //开始录制视频
@@ -63,7 +55,7 @@ class CameraXActivity : AppCompatActivity() {
 
             //录制视频结束
             override fun recordEnd(time: Long) {
-                cameraXFragment.stopTakeVideo()
+                cameraXFragment.stopTakeVideo(time)
             }
 
             //长按拍视频的时候拉焦距缩放
@@ -72,7 +64,7 @@ class CameraXActivity : AppCompatActivity() {
             }
 
             //录制视频错误（拍照也有错误，这里还是不处理了吧）
-            override fun recordError() {
+            override fun recordError(message:String) {
 
             }
         })
@@ -111,7 +103,7 @@ class CameraXActivity : AppCompatActivity() {
         }
 
 
-        //去浏览媒体资源，使用的是知乎的开源库 Matisse
+        //去浏览媒体资源，使用的是知乎的开源库 Matisse，用法参考官方说明
         photo_view_btn.setOnClickListener {
             Matisse.from(this@CameraXActivity)
                 .choose(MimeType.ofImage())
@@ -120,7 +112,7 @@ class CameraXActivity : AppCompatActivity() {
                 .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
                 .thumbnailScale(0.45f)
                 .imageEngine(GlideEngine())
-                .forResult(REQUEST_CODE_CHOOSE_MEDIA)
+                .forResult(10000)
         }
 
         close_btn.setOnClickListener {

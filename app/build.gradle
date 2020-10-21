@@ -35,7 +35,7 @@ android {
 
 dependencies {
 
-    implementation 'anylife.CameraXFragment:camerax:1.0.1'
+    implementation 'anylife.CameraXFragment:camerax:1.0.3'
 
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation "com.zhihu.android:matisse:0.5.3-beta3"
