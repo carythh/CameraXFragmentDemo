@@ -10,7 +10,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.2"
+        classpath "com.android.tools.build:gradle:4.1.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
@@ -30,18 +30,11 @@ allprojects {
         google()
         jcenter()
 
-        maven { url "https://jitpack.io" }
-
         maven {
-            name "aliyunmaven"
-            url "http://maven.aliyun.com/nexus/content/groups/public/"
+            url  "https://dl.bintray.com/anylifezlb/CameraXFragment"
         }
 
-        maven { url 'http://developer.huawei.com/repo/'}
 
-        maven {
-            url 'https://dl.bintray.com/zouyuhan/maven'
-        }
     }
 }
 

@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: anylife.CameraXFragment:camerax:1.0.3@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6b21c9a562e16ec5472fa30dc2ecd096/jetified-camerax-1.0.3/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6b21c9a562e16ec5472fa30dc2ecd096/jetified-camerax-1.0.3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6b21c9a562e16ec5472fa30dc2ecd096/jetified-camerax-1.0.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e7280bfdcd923599cde0de7b41fe6dbf/jetified-camerax-1.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e7280bfdcd923599cde0de7b41fe6dbf/jetified-camerax-1.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e7280bfdcd923599cde0de7b41fe6dbf/jetified-camerax-1.0.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
