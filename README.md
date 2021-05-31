@@ -1,11 +1,20 @@
-# New to https://github.com/AnyLifeZLB/CameraXFragment
+# 迁移到 New to https://github.com/AnyLifeZLB/CameraXFragment
 
 
 
 
 ![image](https://user-images.githubusercontent.com/15169396/119956695-f2f3ca00-bfd3-11eb-8195-137ed35201ea.png)
 
+![image](https://user-images.githubusercontent.com/15169396/119956695-f2f3ca00-bfd3-11eb-8195-137ed35201ea.png)
+![image](https://user-images.githubusercontent.com/15169396/119956695-f2f3ca00-bfd3-11eb-8195-137ed35201ea.png)
 
+![image](https://user-images.githubusercontent.com/15169396/119956695-f2f3ca00-bfd3-11eb-8195-137ed35201ea.png)
+
+
+
+@ DEP
+
+jcenter 已经停止服务，正在迁移到 Maven
 
 # CameraXFragment
 
