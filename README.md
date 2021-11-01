@@ -1,4 +1,4 @@
-# 迁移到 New to https://github.com/AnyLifeZLB/CameraXFragment
+# 本项目已经迁移到：  https://github.com/AnyLifeZLB/CameraXFragment
 
 
 
